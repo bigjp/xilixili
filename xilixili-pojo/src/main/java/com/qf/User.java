@@ -17,5 +17,6 @@ public class User {
     private Integer vipDeadDate;
     private Integer great;
     private String image;
+    private String password;
 
 }
