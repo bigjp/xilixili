@@ -9,6 +9,7 @@
         <module name="xilixili-zipkin-server" />
         <module name="xilixili-zuul" />
         <module name="xilixili-config" />
+        <module name="xilixili-pojo" />
         <module name="xilixili-admin-server" />
         <module name="xilixili-eureka" />
         <module name="untitled" />
@@ -24,6 +25,7 @@
       <module name="xilixili-admin-server" options="-parameters" />
       <module name="xilixili-config" options="-parameters" />
       <module name="xilixili-eureka" options="-parameters" />
+      <module name="xilixili-pojo" options="-parameters" />
       <module name="xilixili-zipkin-server" options="-parameters" />
       <module name="xilixili-zuul" options="-parameters" />
     </option>
