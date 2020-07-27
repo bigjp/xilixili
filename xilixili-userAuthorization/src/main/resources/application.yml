@@ -1,0 +1,16 @@
+server:
+  port: 7002
+spring:
+  application:
+    name: eureka-userAuthorization
+  redis:
+    host: 127.0.0.1
+    port: 6379
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+
+tokenSalt: houduan
+redisTokenExpires: 120
+cookieTokenExpires: 120
