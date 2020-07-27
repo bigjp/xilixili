@@ -1,0 +1,16 @@
+server:
+  port: 8100
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native  # 配置使用本地储存
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:properties    # 搜索src/main/resource 下的properties														文件夹下的文件
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/

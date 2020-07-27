@@ -1,0 +1,17 @@
+server:
+  port: 8000
+spring:
+  application:
+
+    name: eureka-server
+eureka:
+  client:
+    #是否将自己注册到eureka，使用的单机环境，不需要注册
+    register-with-eureka: false
+    #是否从其他eureka中获取注册信息
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+  server:
+    #开启自我保护
+    enable-self-preservation: false

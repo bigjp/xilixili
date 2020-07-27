@@ -6,8 +6,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="xilixili" />
+        <module name="xilixili-zipkin-server" />
+        <module name="xilixili-zuul" />
+        <module name="xilixili-config" />
+        <module name="xilixili-admin-server" />
+        <module name="xilixili-eureka" />
+        <module name="untitled" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="untitled" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="untitled" options="-parameters" />
+      <module name="xilixili-admin-server" options="-parameters" />
+      <module name="xilixili-config" options="-parameters" />
+      <module name="xilixili-eureka" options="-parameters" />
+      <module name="xilixili-zipkin-server" options="-parameters" />
+      <module name="xilixili-zuul" options="-parameters" />
+    </option>
   </component>
 </project>
