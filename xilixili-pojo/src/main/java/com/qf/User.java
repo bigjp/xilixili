@@ -11,10 +11,10 @@ public class User {
     private String sex;
     private Date birthday;
     private String sign;
-    private Integer phonr;
+    private Integer phone;
     private String email;
     private Integer vipLevel;
-    private Integer vipDeadDate;
+    private Date vipDeadDate;
     private Integer great;
     private String image;
     private String password;

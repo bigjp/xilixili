@@ -2,11 +2,13 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="xilixili-zipkin-server" />
+        <module name="xilixili-userInfo" />
         <module name="xilixili-zuul" />
         <module name="xilixili-config" />
         <module name="xilixili-pojo" />
@@ -26,6 +28,7 @@
       <module name="xilixili-config" options="-parameters" />
       <module name="xilixili-eureka" options="-parameters" />
       <module name="xilixili-pojo" options="-parameters" />
+      <module name="xilixili-userInfo" options="-parameters" />
       <module name="xilixili-zipkin-server" options="-parameters" />
       <module name="xilixili-zuul" options="-parameters" />
     </option>
