@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/xilixili-eureka/xilixili-eureka.iml" filepath="$PROJECT_DIR$/xilixili-eureka/xilixili-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/xilixili-index/xilixili-index.iml" filepath="$PROJECT_DIR$/xilixili-index/xilixili-index.iml" />
       <module fileurl="file://$PROJECT_DIR$/xilixili-pojo/xilixili-pojo.iml" filepath="$PROJECT_DIR$/xilixili-pojo/xilixili-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-userInfo/xilixili-userInfo.iml" filepath="$PROJECT_DIR$/xilixili-userInfo/xilixili-userInfo.iml" />
       <module fileurl="file://$PROJECT_DIR$/xilixili-video/xilixili-video.iml" filepath="$PROJECT_DIR$/xilixili-video/xilixili-video.iml" />
       <module fileurl="file://$PROJECT_DIR$/xilixili-zipkin-server/xilixili-zipkin-server.iml" filepath="$PROJECT_DIR$/xilixili-zipkin-server/xilixili-zipkin-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/xilixili-zuul/xilixili-zuul.iml" filepath="$PROJECT_DIR$/xilixili-zuul/xilixili-zuul.iml" />

@@ -13,6 +13,7 @@
         <module name="xilixili-eureka" />
         <module name="xilixili-index" />
         <module name="xilixili-pojo" />
+        <module name="xilixili-userInfo" />
         <module name="xilixili-video" />
         <module name="xilixili-zipkin-server" />
         <module name="xilixili-zuul" />
@@ -27,6 +28,7 @@
       <module name="xilixili-eureka" target="1.8" />
       <module name="xilixili-index" target="1.8" />
       <module name="xilixili-pojo" target="1.8" />
+      <module name="xilixili-userInfo" target="1.8" />
       <module name="xilixili-video" target="1.8" />
       <module name="xilixili-zipkin-server" target="1.8" />
       <module name="xilixili-zuul" target="1.8" />
