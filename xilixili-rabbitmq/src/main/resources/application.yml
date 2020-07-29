@@ -1,0 +1,36 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: eureka-rabbitmq
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    passowrd: guest
+    virtualHost: /
+    publisher-confirms: true
+    publisher-returns: true
+  mail:
+    host: smtp.qq.com
+    username: 1732482910@qq.com
+    #QQ邮箱的授权码
+    password: orarwdgzerhbccbb
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+simpleMailMessage:
+  from: 1732482910@qq.com
+  subject: 注册验证码
+  text: 123456
+redis:
+  codeExpired: 120

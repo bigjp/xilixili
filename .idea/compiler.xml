@@ -7,6 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="untitled" />
+        <module name="xilixili-zipkin-server" />
+        <module name="xilixili-userInfo" />
+        <module name="xilixili-config" />
+        <module name="xilixili-eureka" />
+        <module name="xilixili-zuul" />
+        <module name="xilixili-pojo" />
         <module name="xilixili-admin-server" />
         <module name="xilixili-config" />
         <module name="xilixili-elasticearch" />
@@ -17,10 +23,15 @@
         <module name="xilixili-video" />
         <module name="xilixili-zipkin-server" />
         <module name="xilixili-zuul" />
+        <module name="xilixili-search" />
+        <module name="xilixili-common" />
+        <module name="xilixili-rabbitmq" />
+        <module name="xilixili-userAuthorization" />
+        <module name="daoOperation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="untitled" target="1.8" />
+      <module name="xilixili-daoOperation" target="1.8" />
       <module name="xilixili" target="1.8" />
       <module name="xilixili-admin-server" target="1.8" />
       <module name="xilixili-config" target="1.8" />
@@ -36,10 +47,16 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="untitled" options="-parameters" />
+      <module name="daoOperation" options="-parameters" />
       <module name="xilixili-admin-server" options="-parameters" />
+      <module name="xilixili-common" options="-parameters" />
       <module name="xilixili-config" options="-parameters" />
       <module name="xilixili-eureka" options="-parameters" />
+      <module name="xilixili-pojo" options="-parameters" />
+      <module name="xilixili-rabbitmq" options="-parameters" />
+      <module name="xilixili-search" options="-parameters" />
+      <module name="xilixili-userAuthorization" options="-parameters" />
+      <module name="xilixili-userInfo" options="-parameters" />
       <module name="xilixili-zipkin-server" options="-parameters" />
       <module name="xilixili-zuul" options="-parameters" />
     </option>

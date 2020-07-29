@@ -18,6 +18,12 @@
         <module>xilixili-index</module>
         <module>xilixili-elasticearch</module>
         <module>xilixili-video</module>
+        <module>xilixili-userInfo</module>
+        <module>xilixili-daoOperation</module>
+        <module>xilixili-userAuthorization</module>
+        <module>xilixili-common</module>
+        <module>xilixili-rabbitmq</module>
+        <module>xilixili-search</module>
     </modules>
 
     <parent>

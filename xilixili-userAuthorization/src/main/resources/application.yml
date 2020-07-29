@@ -1,0 +1,29 @@
+server:
+  port: 7002
+spring:
+  application:
+    name: eureka-userAuthorization
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  mail:
+    host: smtp.qq.com
+    username: 1732482910@qq.com
+    #QQ邮箱的授权码
+    password: orarwdgzerhbccbb
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+
+tokenSalt: xilixili
+redisTokenExpires: 120
+cookieTokenExpires: 120
