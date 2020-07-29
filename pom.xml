@@ -14,6 +14,10 @@
         <module>xilixili-zuul</module>
         <module>xilixili-admin-server</module>
         <module>xilixili-zipkin-server</module>
+        <module>xilixili-pojo</module>
+        <module>xilixili-index</module>
+        <module>xilixili-elasticearch</module>
+        <module>xilixili-video</module>
     </modules>
 
     <parent>

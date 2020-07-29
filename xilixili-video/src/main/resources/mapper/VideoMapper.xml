@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.VideoDao">
+
+    <update id="addgreat" parameterType="int">
+
+        UPDATE video SET great=great+1 WHERE vid=#{vid}
+
+    </update>
+
+    <update id="delgreat" parameterType="int">
+
+        UPDATE video SET great=great-1 WHERE vid=#{vid}
+
+    </update>
+
+    <insert id="collections" parameterType="int">
+
+        INSERT into user_collections (uid,vid) VALUES (#{uid},#{vid})
+
+    </insert>
+
+    <delete id="delcollections" parameterType="int">
+
+        delete from user_collections where uid=#{uid} and vid=#{vid}
+
+    </delete>
+
+    <update id="updatecollections" parameterType="int">
+
+        update video set collentions=collentions+1 where vid=#{vid}
+
+    </update>
+
+
+
+    <select id="findAllgreat" parameterType="int" resultType="Video">
+
+        select great from video where vid=#{vid}
+
+    </select>
+
+    <select id="findMyCollectons" parameterType="int" resultType="Video">
+
+        SELECT * FROM `user`,video,user_collections WHERE
+        `user`.`uid`=user_collections.`uid`
+        AND user_collections.`vid`=video.`vid`
+        AND user.`uid`=#{uid}
+
+    </select>
+
+    <insert id="follow" >
+
+        insert into follow (uid,fid,fdate) VALUES (#{uid},#{fid},#{date})
+
+    </insert>
+
+    <insert id="followgroup"  parameterType="int" >
+
+        insert into group_user (gid,uid,fid) VALUES (#{gid},#{uid},#{fid})
+
+    </insert>
+
+    <delete id="delfollow" parameterType="int">
+
+        delete from follow where uid=#{uid} and fid=#{fid}
+
+    </delete>
+
+    <delete id="delgroup" parameterType="int">
+
+        delete from group_user where uid=#{uid} and fid=#{fid}
+
+    </delete>
+
+    <select id="findAllFollow" parameterType="int" resultType="User">
+
+        SELECT * FROM `user`,group_user WHERE
+        `user`.`uid`=group_user.`fid`
+        AND group_user.uid=#{uid}
+
+    </select>
+
+    <select id="findfollow" parameterType="int" resultType="User">
+
+        SELECT * FROM `user`,group_user WHERE
+        `user`.`uid`=group_user.`fid`
+        AND group_user.`gid`=#{gid}
+        AND group_user.uid=#{uid}
+
+    </select>
+
+    <select id="findFollowOne" parameterType="int" resultType="User">
+
+        SELECT * FROM follow,`user`WHERE follow.`fid`=`user`.`uid`
+        AND follow.`uid`=#{uid}
+        AND follow.`fid`=#{fid}
+
+    </select>
+
+    <update id="group" parameterType="int">
+
+        update group_user set gid=#{gid} where uid=#{uid} and fid=#{fid}
+
+    </update>
+
+    <delete id="delGroupByGid" parameterType="int">
+
+        delete from `group` where gid=#{gid}
+
+    </delete>
+
+    <insert id="creatgroup">
+
+        insert into `group` (gname,uid) VALUES (#{gname},#{uid})
+
+    </insert>
+
+    <select id="findGroupById" parameterType="int" resultType="Group">
+
+        select * from `group` where uid=#{uid}
+
+    </select>
+
+    <select id="findFans" parameterType="int" resultType="User">
+
+        SELECT * FROM `user`,user_fans WHERE `user`.`uid`=user_fans.`fansid`
+        AND user_fans.`uid`=#{uid}
+
+    </select>
+
+    <insert id="addfans" parameterType="int">
+
+        insert into user_fans (uid,fansid) values(#{fid},#{uid})
+
+    </insert>
+
+    <insert id="addhistory">
+
+        insert into history (vid,lookdate,uid) VALUES (#{vid},#{date},#{uid})
+
+    </insert>
+
+    <select id="findhistory" parameterType="int" resultType="History">
+
+        select * from history where uid=#{uid} ORDER BY lookdate DESC
+
+    </select>
+
+    <update id="updhistory">
+
+        update history set lookdate=#{date} where uid=#{uid} and vid=#{vid}
+
+    </update>
+
+</mapper>

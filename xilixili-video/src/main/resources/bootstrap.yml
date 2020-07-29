@@ -1,0 +1,16 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: xilixili-video
+  cloud:
+    config:
+      name: xilixili-config
+      profile: dev
+      discovery:
+        service-id: config-server
+        enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
