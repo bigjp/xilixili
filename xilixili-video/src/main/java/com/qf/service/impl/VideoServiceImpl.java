@@ -86,7 +86,7 @@ public class VideoServiceImpl implements VideoService {
         if(user==null){
             Integer code  = videoDao.follow(uid, fid, date);
             Integer code1 = videoDao.addfollow(uid,fid);
-            //添加到默认分组
+            //添加到默认分组.
             videoDao.followgroup(fid, 0,uid);
             //添加到被关注人的粉丝列表
             videoDao.addfans(fid,uid);
