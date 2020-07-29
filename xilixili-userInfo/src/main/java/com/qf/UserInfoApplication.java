@@ -2,12 +2,12 @@ package com.qf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-@EnableZuulProxy
-public class ZuulApplication {
+@EnableDiscoveryClient
+public class UserInfoApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ZuulApplication.class);
+        SpringApplication.run(UserInfoApplication.class);
     }
 }
