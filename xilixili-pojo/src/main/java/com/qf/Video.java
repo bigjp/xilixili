@@ -9,7 +9,7 @@ import java.util.Date;
 public class Video {
     private Integer vid;
     private String title;
-    private String description;
+    private String discription;
     private String type;
     private String date;
     private Integer clicks;

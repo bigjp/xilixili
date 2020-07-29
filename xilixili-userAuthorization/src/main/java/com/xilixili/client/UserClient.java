@@ -1,6 +1,5 @@
 package com.xilixili.client;
 
-import com.qf.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

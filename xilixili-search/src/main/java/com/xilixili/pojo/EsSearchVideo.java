@@ -1,6 +1,5 @@
 package com.xilixili.pojo;
 
-import com.qf.Video;
 import lombok.Data;
 
 @Data

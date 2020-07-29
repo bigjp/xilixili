@@ -64,10 +64,5 @@ public class UploadUtils {
             e.printStackTrace();
         }
         return "";
-
-
-
-
-
     }
 }

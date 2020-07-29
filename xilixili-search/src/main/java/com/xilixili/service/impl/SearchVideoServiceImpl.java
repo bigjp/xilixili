@@ -1,6 +1,5 @@
 package com.xilixili.service.impl;
 
-import com.qf.Video;
 import com.xilixili.pojo.EsSearchVideo;
 import com.xilixili.service.SearchVideoService;
 import com.xilixili.utils.QueryUtils;

@@ -1,6 +1,5 @@
 package com.xilixili.consumer;
 
-import com.qf.Comment;
 import com.xilixili.client.CommentClient;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;

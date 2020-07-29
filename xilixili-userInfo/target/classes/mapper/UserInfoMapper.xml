@@ -56,6 +56,9 @@
     <select id="selectUserFansId" resultType="int">
         select fansid from user_fans where uid=#{uid}
     </select>
+    <delete id="cancelConcern">
+        delete from user_fans where fansid=#{fansId}
+    </delete>
 
 
 </mapper>

@@ -1,6 +1,5 @@
 package com.xilixili.controller;
 
-import com.qf.Video;
 import com.xilixili.pojo.EsSearchVideo;
 import com.xilixili.service.SearchVideoService;
 import org.springframework.beans.factory.annotation.Autowired;

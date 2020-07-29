@@ -1,9 +1,6 @@
 package com.qf.dao;
 
-import com.qf.pojo.Group;
-import com.qf.pojo.History;
-import com.qf.pojo.User;
-import com.qf.pojo.Video;
+import com.qf.Group;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

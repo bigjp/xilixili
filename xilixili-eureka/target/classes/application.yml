@@ -11,7 +11,7 @@ eureka:
     #是否从其他eureka中获取注册信息
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8000/eureka/
+      defaultZone: http://10.12.159.73:8000/eureka/
   server:
     #开启自我保护
     enable-self-preservation: false

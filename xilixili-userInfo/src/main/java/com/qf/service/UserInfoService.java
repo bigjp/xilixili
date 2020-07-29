@@ -1,9 +1,5 @@
 package com.qf.service;
 
-import com.qf.User;
-import com.qf.Video;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import java.util.List;
 
 public interface UserInfoService {
@@ -26,4 +22,6 @@ public interface UserInfoService {
     void insertCollections(Integer uid,Integer vid);
 
     List<User> selectUserFans(Integer uid);
+
+    void cancelConcern(Integer fansId);
 }

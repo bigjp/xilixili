@@ -1,9 +1,6 @@
 package com.qf.dao;
 
-import com.qf.User;
-import com.qf.Video;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -29,4 +26,5 @@ public interface UserInfoDao {
 
     List<Integer> selectUserFansId(Integer uid);
 
+    void cancelConcern(Integer fansId);
 }

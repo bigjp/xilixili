@@ -8,6 +8,6 @@ import java.util.Date;
 public class History {
     private  Integer hid;
     private Integer vid;
-    private String lookDate;
+    private Date lookDate;
 
 }

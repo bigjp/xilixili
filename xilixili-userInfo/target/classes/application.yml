@@ -4,7 +4,7 @@ spring:
   application:
     name: xilixili-userInfo
   zipkin:
-    base-url: http://localhost:9000
+    base-url: http://10.12.159.73:9000
   sleuth:
     sampler:
       probability: 1.0

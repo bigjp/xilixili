@@ -1,12 +1,9 @@
 package com.qf.controller;
 
-import com.qf.User;
-import com.qf.Video;
 import com.qf.service.UserInfoService;
 import com.qf.utils.UploadUtils;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -78,4 +75,11 @@ public class UserInfoController {
     public List<User> selectUserFans(Integer uid){
        return userInfoService.selectUserFans(uid);
     }
+    //用户取消关注
+    @RequestMapping("/cancelConcern")
+    public String CancelConcern (Integer fansId){
+        userInfoService.cancelConcern(fansId);
+        return "取消关注成功";
+    }
+
 }

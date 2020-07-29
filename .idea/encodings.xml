@@ -9,9 +9,11 @@
     <file url="file://$PROJECT_DIR$/xilixili-config/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-daoOperation/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-elasticearch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xilixili-elasticearch/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-index" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xilixili-index/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-pojo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-pojo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-rabbitmq" charset="UTF-8" />
@@ -23,6 +25,7 @@
     <file url="file://$PROJECT_DIR$/xilixili-userInfo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-userInfo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-video" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xilixili-video/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-zipkin-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-zipkin-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xilixili-zuul" charset="UTF-8" />

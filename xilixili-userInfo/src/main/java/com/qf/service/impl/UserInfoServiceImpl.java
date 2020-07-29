@@ -1,7 +1,5 @@
 package com.qf.service.impl;
 
-import com.qf.User;
-import com.qf.Video;
 import com.qf.dao.UserInfoDao;
 import com.qf.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,8 +57,6 @@ public class UserInfoServiceImpl implements UserInfoService {
     public List<User> selectUserFans(Integer uid) {
         List<User> userList=new ArrayList<>();
        List<Integer> fansId= userInfoDao.selectUserFansId(uid);
-
-        System.out.println(fansId.get(1));
         for (int i=0;i<fansId.size();i++) {
             if (fansId.get(i) != null) {
                 User user = userInfoDao.selectUserByUid(fansId.get(i));
@@ -70,6 +66,10 @@ public class UserInfoServiceImpl implements UserInfoService {
         return userList;
     }
 
+    @Override
+    public void cancelConcern(Integer fansId) {
+        userInfoDao.cancelConcern(fansId);
+    }
 
 
 }
