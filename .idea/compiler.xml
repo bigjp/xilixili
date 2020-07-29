@@ -13,12 +13,17 @@
         <module name="xilixili-config" />
         <module name="xilixili-pojo" />
         <module name="xilixili-admin-server" />
+        <module name="xilixili-userAuthorization" />
         <module name="xilixili-eureka" />
         <module name="untitled" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="untitled" target="1.8" />
+      <module name="xilixili-common" target="1.8" />
+      <module name="xilixili-daoOperation" target="1.8" />
+      <module name="xilixili-rabbitmq" target="1.8" />
+      <module name="xilixili-search" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -28,6 +33,7 @@
       <module name="xilixili-config" options="-parameters" />
       <module name="xilixili-eureka" options="-parameters" />
       <module name="xilixili-pojo" options="-parameters" />
+      <module name="xilixili-userAuthorization" options="-parameters" />
       <module name="xilixili-userInfo" options="-parameters" />
       <module name="xilixili-zipkin-server" options="-parameters" />
       <module name="xilixili-zuul" options="-parameters" />
