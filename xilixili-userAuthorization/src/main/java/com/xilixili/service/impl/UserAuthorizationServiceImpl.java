@@ -1,6 +1,7 @@
 package com.xilixili.service.impl;
 
 import com.qf.User;
+import com.qf.response.BaseResp;
 import com.xilixili.client.UserClient;
 import com.xilixili.service.UserAuthorizationService;
 import io.jsonwebtoken.JwtBuilder;
@@ -9,6 +10,8 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -83,6 +86,7 @@ public class UserAuthorizationServiceImpl implements UserAuthorizationService {
         }
         return "注册失败";
     }
+
 
     /**
      * 根据用户信息生成加密后的token，存入cookie、redis中

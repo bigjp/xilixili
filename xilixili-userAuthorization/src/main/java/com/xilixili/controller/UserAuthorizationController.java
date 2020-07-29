@@ -1,12 +1,11 @@
 package com.xilixili.controller;
 
 import com.qf.User;
+import com.qf.response.BaseResp;
 import com.xilixili.service.UserAuthorizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserAuthorizationController {
@@ -23,4 +22,5 @@ public class UserAuthorizationController {
     public String regis(@RequestBody User user){
         return userAuthorizationService.regis(user);
     }
+
 }

@@ -1,11 +1,16 @@
 server:
-  port: 7002
+  port: 9999
 spring:
   application:
-    name: eureka-userAuthorization
-  redis:
+    name: eureka-rabbitmq
+  rabbitmq:
     host: 127.0.0.1
-    port: 6379
+    port: 5672
+    username: guest
+    passowrd: guest
+    virtualHost: /
+    publisher-confirms: true
+    publisher-returns: true
   mail:
     host: smtp.qq.com
     username: 1732482910@qq.com
@@ -23,7 +28,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka
-
-tokenSalt: xilixili
-redisTokenExpires: 120
-cookieTokenExpires: 120
+simpleMailMessage:
+  from: 1732482910@qq.com
+  subject: 注册验证码
+  text: 123456
+redis:
+  codeExpired: 120

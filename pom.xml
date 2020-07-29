@@ -16,6 +16,11 @@
         <module>xilixili-zipkin-server</module>
         <module>xilixili-pojo</module>
         <module>xilixili-userInfo</module>
+        <module>xilixili-daoOperation</module>
+        <module>xilixili-userAuthorization</module>
+        <module>xilixili-common</module>
+        <module>xilixili-rabbitmq</module>
+        <module>xilixili-search</module>
     </modules>
 
     <parent>
