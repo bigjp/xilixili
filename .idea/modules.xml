@@ -9,6 +9,9 @@
       <module fileurl="file://$PROJECT_DIR$/xilixili-eureka/xilixili-eureka.iml" filepath="$PROJECT_DIR$/xilixili-eureka/xilixili-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/xilixili-index/xilixili-index.iml" filepath="$PROJECT_DIR$/xilixili-index/xilixili-index.iml" />
       <module fileurl="file://$PROJECT_DIR$/xilixili-pojo/xilixili-pojo.iml" filepath="$PROJECT_DIR$/xilixili-pojo/xilixili-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-rabbitmq/xilixili-rabbitmq.iml" filepath="$PROJECT_DIR$/xilixili-rabbitmq/xilixili-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-search/xilixili-search.iml" filepath="$PROJECT_DIR$/xilixili-search/xilixili-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-userAuthorization/xilixili-userAuthorization.iml" filepath="$PROJECT_DIR$/xilixili-userAuthorization/xilixili-userAuthorization.iml" />
       <module fileurl="file://$PROJECT_DIR$/xilixili-userInfo/xilixili-userInfo.iml" filepath="$PROJECT_DIR$/xilixili-userInfo/xilixili-userInfo.iml" />
       <module fileurl="file://$PROJECT_DIR$/xilixili-video/xilixili-video.iml" filepath="$PROJECT_DIR$/xilixili-video/xilixili-video.iml" />
       <module fileurl="file://$PROJECT_DIR$/xilixili-zipkin-server/xilixili-zipkin-server.iml" filepath="$PROJECT_DIR$/xilixili-zipkin-server/xilixili-zipkin-server.iml" />

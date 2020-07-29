@@ -6,39 +6,36 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="daoOperation" />
         <module name="untitled" />
-        <module name="xilixili-zipkin-server" />
-        <module name="xilixili-userInfo" />
-        <module name="xilixili-config" />
-        <module name="xilixili-eureka" />
-        <module name="xilixili-zuul" />
-        <module name="xilixili-pojo" />
         <module name="xilixili-admin-server" />
+        <module name="xilixili-common" />
         <module name="xilixili-config" />
         <module name="xilixili-elasticearch" />
         <module name="xilixili-eureka" />
         <module name="xilixili-index" />
         <module name="xilixili-pojo" />
+        <module name="xilixili-rabbitmq" />
+        <module name="xilixili-search" />
+        <module name="xilixili-userAuthorization" />
         <module name="xilixili-userInfo" />
         <module name="xilixili-video" />
         <module name="xilixili-zipkin-server" />
         <module name="xilixili-zuul" />
-        <module name="xilixili-search" />
-        <module name="xilixili-common" />
-        <module name="xilixili-rabbitmq" />
-        <module name="xilixili-userAuthorization" />
-        <module name="daoOperation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="xilixili-daoOperation" target="1.8" />
       <module name="xilixili" target="1.8" />
       <module name="xilixili-admin-server" target="1.8" />
       <module name="xilixili-config" target="1.8" />
+      <module name="xilixili-daoOperation" target="1.8" />
       <module name="xilixili-elasticearch" target="1.8" />
       <module name="xilixili-eureka" target="1.8" />
       <module name="xilixili-index" target="1.8" />
       <module name="xilixili-pojo" target="1.8" />
+      <module name="xilixili-rabbitmq" target="1.8" />
+      <module name="xilixili-search" target="1.8" />
+      <module name="xilixili-userAuthorization" target="1.8" />
       <module name="xilixili-userInfo" target="1.8" />
       <module name="xilixili-video" target="1.8" />
       <module name="xilixili-zipkin-server" target="1.8" />
