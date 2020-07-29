@@ -1,5 +1,6 @@
 package com.xilixili.service.impl;
 
+import com.qf.Comment;
 import com.qf.response.BaseResp;
 import com.xilixili.service.CommentService;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

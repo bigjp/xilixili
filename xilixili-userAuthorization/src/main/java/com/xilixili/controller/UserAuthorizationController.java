@@ -1,5 +1,6 @@
 package com.xilixili.controller;
 
+import com.qf.User;
 import com.xilixili.service.UserAuthorizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

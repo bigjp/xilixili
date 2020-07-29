@@ -1,5 +1,6 @@
 package com.xilixili.service.impl;
 
+import com.qf.User;
 import com.xilixili.client.UserClient;
 import com.xilixili.service.UserAuthorizationService;
 import io.jsonwebtoken.JwtBuilder;

@@ -1,6 +1,7 @@
 package com.qf.controller;
 
-import com.qf.pojo.BaseResp;
+import com.qf.Video;
+import com.qf.response.BaseResp;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RestHighLevelClient;
@@ -26,7 +27,7 @@ public class Elasticsearch {
     RestHighLevelClient restHighLevelClient;
 
     @RequestMapping("/findvideo")
-    public BaseResp findvideo(String type,Integer currentpage,Integer size){
+    public BaseResp findvideo(String type, Integer currentpage, Integer size){
         SearchRequest searchRequest = new SearchRequest("project");
         searchRequest.types("doc");
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
@@ -51,9 +52,9 @@ public class Elasticsearch {
                 String title = (String)sourceAsMap.get("title");
                 String description=(String) sourceAsMap.get("description");
                 String type1 = (String)sourceAsMap.get("type");
-                Date date=new SimpleDateFormat("yyyy-MM-dd").parse((String)sourceAsMap.get("date"));
+                String date=new SimpleDateFormat("yyyy-MM-dd").format((String)sourceAsMap.get("date"));
                 Integer clicks = (Integer)sourceAsMap.get("clicks");
-                String collentions=(String)sourceAsMap.get("collentions");
+                Integer collentions=(Integer)sourceAsMap.get("collentions");
                 Integer great=(Integer)sourceAsMap.get("great");
                 String videopath =(String) sourceAsMap.get("videopath");
                 Video video=new Video();
@@ -63,7 +64,7 @@ public class Elasticsearch {
                 video.setType(type1);
                 video.setDate(date);
                 video.setClicks(clicks);
-                video.setCollentions(collentions);
+                video.setCollections(collentions);
                 video.setGreat(great);
                 video.setVideopath(videopath);
                 videos.add(video);

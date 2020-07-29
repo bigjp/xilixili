@@ -1,5 +1,6 @@
 package com.xilixili.controller;
 
+import com.qf.Comment;
 import com.qf.response.BaseResp;
 import com.xilixili.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;

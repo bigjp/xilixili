@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xilixili.iml" filepath="$PROJECT_DIR$/xilixili.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-admin-server/xilixili-admin-server.iml" filepath="$PROJECT_DIR$/xilixili-admin-server/xilixili-admin-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-config/xilixili-config.iml" filepath="$PROJECT_DIR$/xilixili-config/xilixili-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-elasticearch/xilixili-elasticearch.iml" filepath="$PROJECT_DIR$/xilixili-elasticearch/xilixili-elasticearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-eureka/xilixili-eureka.iml" filepath="$PROJECT_DIR$/xilixili-eureka/xilixili-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-index/xilixili-index.iml" filepath="$PROJECT_DIR$/xilixili-index/xilixili-index.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-pojo/xilixili-pojo.iml" filepath="$PROJECT_DIR$/xilixili-pojo/xilixili-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-rabbitmq/xilixili-rabbitmq.iml" filepath="$PROJECT_DIR$/xilixili-rabbitmq/xilixili-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-search/xilixili-search.iml" filepath="$PROJECT_DIR$/xilixili-search/xilixili-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-userAuthorization/xilixili-userAuthorization.iml" filepath="$PROJECT_DIR$/xilixili-userAuthorization/xilixili-userAuthorization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-userInfo/xilixili-userInfo.iml" filepath="$PROJECT_DIR$/xilixili-userInfo/xilixili-userInfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-video/xilixili-video.iml" filepath="$PROJECT_DIR$/xilixili-video/xilixili-video.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-zipkin-server/xilixili-zipkin-server.iml" filepath="$PROJECT_DIR$/xilixili-zipkin-server/xilixili-zipkin-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xilixili-zuul/xilixili-zuul.iml" filepath="$PROJECT_DIR$/xilixili-zuul/xilixili-zuul.iml" />
+    </modules>
+  </component>
+</project>

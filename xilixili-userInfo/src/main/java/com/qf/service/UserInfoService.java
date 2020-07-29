@@ -1,5 +1,8 @@
 package com.qf.service;
 
+import com.qf.User;
+import com.qf.Video;
+
 import java.util.List;
 
 public interface UserInfoService {

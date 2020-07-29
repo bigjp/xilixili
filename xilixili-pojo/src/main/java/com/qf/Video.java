@@ -9,13 +9,13 @@ import java.util.Date;
 public class Video {
     private Integer vid;
     private String title;
-    private String discription;
+    private String description;
     private String type;
     private String date;
     private Integer clicks;
-    private String collections;
+    private Integer collections;
     private Integer great;
-    private String videoPath;
+    private String videopath;
 
     public String getDate() {
         return date;

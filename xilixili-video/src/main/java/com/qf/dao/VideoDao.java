@@ -1,6 +1,9 @@
 package com.qf.dao;
 
 import com.qf.Group;
+import com.qf.History;
+import com.qf.User;
+import com.qf.Video;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -57,4 +60,15 @@ public interface VideoDao {
     Integer updhistory(@Param("uid")Integer uid,@Param("vid")Integer vid,@Param("date") Date date);
 
 
+    List<Group> findGroupByGname(@Param("gname") String gname,@Param("uid") Integer uid);
+
+    Integer addhistoryuser(@Param("uid") Integer uid,@Param("hid") Integer hid);
+
+    History findhistoryuser(@Param("uid") Integer uid, @Param("vid") Integer vid);
+
+    Integer addgroup(@Param("gid") Integer gid, @Param("fid") Integer fid);
+
+    Group findgroupuser(@Param("gid") Integer gid, @Param("fid") Integer fid);
+
+    Integer addfollow(@Param("uid") Integer uid,@Param("fid") Integer fid);
 }

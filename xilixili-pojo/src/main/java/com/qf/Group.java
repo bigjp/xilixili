@@ -6,5 +6,7 @@ import lombok.Data;
 public class Group {
 
     private Integer gid;
+    private Integer uid;
+    private Integer fid;
     private String gname;
 }

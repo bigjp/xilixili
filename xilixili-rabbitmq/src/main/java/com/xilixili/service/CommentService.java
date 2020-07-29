@@ -1,5 +1,6 @@
 package com.xilixili.service;
 
+import com.qf.Comment;
 import com.qf.response.BaseResp;
 
 public interface CommentService {

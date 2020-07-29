@@ -30,7 +30,7 @@
 
     <update id="updatecollections" parameterType="int">
 
-        update video set collentions=collentions+1 where vid=#{vid}
+        update video set collections=collections+1 where vid=#{vid}
 
     </update>
 
@@ -118,6 +118,12 @@
 
     </insert>
 
+    <select id="findGroupByGname" resultType="Group">
+
+        select * from `group` where gname=#{gname} and uid=#{uid}
+
+    </select>
+
     <select id="findGroupById" parameterType="int" resultType="Group">
 
         select * from `group` where uid=#{uid}
@@ -139,20 +145,50 @@
 
     <insert id="addhistory">
 
-        insert into history (vid,lookdate,uid) VALUES (#{vid},#{date},#{uid})
+        insert into history (vid,`date`,uid) VALUES (#{vid},#{date},#{uid})
+
+    </insert>
+
+    <insert id="addhistoryuser" parameterType="int">
+
+        INSERT into user_history (uid,hid) VALUES (#{uid},#{hid})
 
     </insert>
 
     <select id="findhistory" parameterType="int" resultType="History">
 
-        select * from history where uid=#{uid} ORDER BY lookdate DESC
+        select * from history where uid=#{uid} ORDER BY `date`  DESC
+
+    </select>
+
+    <select id="findhistoryuser" parameterType="int" resultType="History">
+
+        select * from history where uid=#{uid} and vid=#{vid}
 
     </select>
 
     <update id="updhistory">
 
-        update history set lookdate=#{date} where uid=#{uid} and vid=#{vid}
+        update history set `date`=#{date} where uid=#{uid} and vid=#{vid}
 
     </update>
+
+    <insert id="addgroup" parameterType="int">
+
+        insert into user_group (uid,gid) VALUES (#{fid},#{gid})
+
+    </insert>
+
+    <select id="findgroupuser" resultType="Group">
+
+        select * from user_group where uid=#{fid} and gid=#{gid}
+
+    </select>
+
+    <insert id="addfollow" parameterType="int">
+
+        INSERT  into user_follow (uid,fid) VALUES (#{uid},#{fid})
+
+    </insert>
 
 </mapper>

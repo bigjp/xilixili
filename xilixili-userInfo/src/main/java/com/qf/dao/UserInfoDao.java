@@ -1,5 +1,7 @@
 package com.qf.dao;
 
+import com.qf.User;
+import com.qf.Video;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

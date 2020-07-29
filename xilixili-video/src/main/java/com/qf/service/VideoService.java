@@ -1,6 +1,7 @@
 package com.qf.service;
 
-import com.qf.pojo.BaseResp;
+
+import com.qf.response.BaseResp;
 
 public interface VideoService {
 

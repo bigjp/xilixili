@@ -1,8 +1,11 @@
 package com.qf.service.impl;
 
 import com.qf.Group;
+import com.qf.History;
+import com.qf.User;
+import com.qf.Video;
 import com.qf.dao.VideoDao;
-import com.qf.pojo.*;
+import com.qf.response.BaseResp;
 import com.qf.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -82,6 +85,7 @@ public class VideoServiceImpl implements VideoService {
         BaseResp baseResp=new BaseResp();
         if(user==null){
             Integer code  = videoDao.follow(uid, fid, date);
+            Integer code1 = videoDao.addfollow(uid,fid);
             //添加到默认分组
             videoDao.followgroup(fid, 0,uid);
             //添加到被关注人的粉丝列表
@@ -143,6 +147,10 @@ public class VideoServiceImpl implements VideoService {
     @Override
     public BaseResp group(Integer gid, Integer uid,Integer fid) {
         Integer code = videoDao.group(gid, uid,fid);
+        Group group=videoDao.findgroupuser(gid,fid);
+        if(group==null){
+            Integer code1=videoDao.addgroup(gid,fid);
+        }
         BaseResp baseResp=new BaseResp();
         baseResp.setCode(code);
         baseResp.setMessage("分组成功");
@@ -151,10 +159,16 @@ public class VideoServiceImpl implements VideoService {
 
     @Override
     public BaseResp creatgroup(String gname,Integer uid) {
-        Integer code=videoDao.creatgroup(gname,uid);
+        List<Group> groups=videoDao.findGroupByGname(gname,uid);
         BaseResp baseResp = new BaseResp();
-        baseResp.setCode(code);
-        baseResp.setMessage("创建分组成功");
+        if(groups!=null && groups.size()==1){
+            baseResp.setCode(0);
+            baseResp.setMessage("分组已存在");
+        }else{
+            Integer code=videoDao.creatgroup(gname,uid);
+            baseResp.setCode(code);
+            baseResp.setMessage("创建分组成功");
+        }
         return baseResp;
     }
 
@@ -205,10 +219,16 @@ public class VideoServiceImpl implements VideoService {
             }
             //没有观看则添加新的记录
             Integer code=videoDao.addhistory(vid,date,uid);
+            History history1=videoDao.findhistoryuser(uid,vid);
+            Integer hid=history1.getHid();
+            Integer code1=videoDao.addhistoryuser(uid,hid);
             baseResp.setCode(code);
             baseResp.setMessage("加入历史观看列表成功");
         }else{
             Integer code=videoDao.addhistory(vid,date,uid);
+            History history1=videoDao.findhistoryuser(uid,vid);
+            Integer hid=history1.getHid();
+            Integer code1=videoDao.addhistoryuser(uid,hid);
             baseResp.setCode(code);
             baseResp.setMessage("加入历史观看列表成功");
         }

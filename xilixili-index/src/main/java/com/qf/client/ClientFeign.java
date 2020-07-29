@@ -1,6 +1,7 @@
 package com.qf.client;
 
-import com.qf.pojo.BaseResp;
+
+import com.qf.response.BaseResp;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

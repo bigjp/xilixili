@@ -1,5 +1,6 @@
 package com.xilixili.service.impl;
 
+import com.qf.Video;
 import com.xilixili.pojo.EsSearchVideo;
 import com.xilixili.service.SearchVideoService;
 import com.xilixili.utils.QueryUtils;
@@ -46,7 +47,7 @@ public class SearchVideoServiceImpl implements SearchVideoService {
                 String description = (String) sourceAsMap.get("description");
                 String type = (String) sourceAsMap.get("type");
                 Integer clicks = (Integer) sourceAsMap.get("clicks");
-                String collections = (String) sourceAsMap.get("collections");
+                Integer collections = (Integer) sourceAsMap.get("collections");
                 String videopath = (String) sourceAsMap.get("videopath");
                 String date = (String) sourceAsMap.get("date");
                 video.setVid(vid);
@@ -54,7 +55,7 @@ public class SearchVideoServiceImpl implements SearchVideoService {
                 video.setType(type);
                 video.setClicks(clicks);
                 video.setCollections(collections);
-                video.setVideoPath(videopath);
+                video.setVideopath(videopath);
 //                long currentTimeMillis = System.currentTimeMillis();
 //                String sdate = String.valueOf(currentTimeMillis);
                 video.setDate(date);

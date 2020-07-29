@@ -1,5 +1,6 @@
 package com.xilixili;
 
+import com.qf.Video;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RestClient;

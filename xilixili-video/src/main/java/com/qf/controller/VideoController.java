@@ -1,6 +1,7 @@
 package com.qf.controller;
 
-import com.qf.pojo.BaseResp;
+
+import com.qf.response.BaseResp;
 import com.qf.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

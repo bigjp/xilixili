@@ -1,5 +1,6 @@
 package com.qf.service.impl;
 
+import com.qf.Video;
 import com.qf.dao.HistoryDao;
 import com.qf.service.HistoryService;
 import org.springframework.beans.factory.annotation.Autowired;

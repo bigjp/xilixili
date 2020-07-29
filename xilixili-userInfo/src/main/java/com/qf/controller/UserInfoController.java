@@ -1,5 +1,7 @@
 package com.qf.controller;
 
+import com.qf.User;
+import com.qf.Video;
 import com.qf.service.UserInfoService;
 import com.qf.utils.UploadUtils;
 import org.apache.ibatis.annotations.Param;

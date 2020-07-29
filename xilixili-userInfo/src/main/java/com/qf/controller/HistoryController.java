@@ -1,5 +1,6 @@
 package com.qf.controller;
 
+import com.qf.Video;
 import com.qf.service.HistoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

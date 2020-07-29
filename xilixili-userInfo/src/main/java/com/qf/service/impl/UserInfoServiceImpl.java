@@ -1,5 +1,7 @@
 package com.qf.service.impl;
 
+import com.qf.User;
+import com.qf.Video;
 import com.qf.dao.UserInfoDao;
 import com.qf.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
