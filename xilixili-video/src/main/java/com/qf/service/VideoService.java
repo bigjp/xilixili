@@ -1,7 +1,11 @@
 package com.qf.service;
 
 
+import com.qf.UserCollections;
+import com.qf.Video;
 import com.qf.response.BaseResp;
+
+import java.util.List;
 
 public interface VideoService {
 
@@ -40,4 +44,12 @@ public interface VideoService {
     BaseResp addhistory(Integer uid, Integer vid);
 
     BaseResp findhistory(Integer uid);
+
+    BaseResp findvideo(Integer vid);
+
+    BaseResp findUpUser(Integer vid);
+
+    UserCollections findUserCollection(Integer uid, Integer vid);
+
+    BaseResp findAllCollection(Integer vid);
 }

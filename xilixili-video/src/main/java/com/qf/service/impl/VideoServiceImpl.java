@@ -1,15 +1,11 @@
 package com.qf.service.impl;
 
-import com.qf.Group;
-import com.qf.History;
-import com.qf.User;
-import com.qf.Video;
+import com.qf.*;
 import com.qf.dao.VideoDao;
 import com.qf.response.BaseResp;
 import com.qf.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.Date;
 import java.util.List;
 
@@ -34,7 +30,7 @@ public class VideoServiceImpl implements VideoService {
     public BaseResp delgreat(Integer vid) {
         Integer code = videoDao.delgreat(vid);
         BaseResp baseResp=new BaseResp();
-        baseResp.setCode(code);
+        baseResp.setCode(0);
         baseResp.setMessage("取消点赞成功");
         return baseResp;
     }
@@ -42,19 +38,29 @@ public class VideoServiceImpl implements VideoService {
     @Override
     public BaseResp collections(Integer uid, Integer vid) {
         Integer code=videoDao.collections(uid,vid);
-        videoDao.updatecollections(vid);
+        Integer co=1;
+        videoDao.updatecollections(co,vid);
         BaseResp baseResp=new BaseResp();
-        baseResp.setCode(code);
+        baseResp.setCode(1);
         baseResp.setMessage("点击收藏成功");
         return baseResp;
     }
 
     @Override
     public BaseResp delcollections(Integer uid, Integer vid) {
-        Integer code=videoDao.delcollections(uid,vid);
+        //查询此视频有没有已经被收藏
+        UserCollections video =videoDao.findUserCollection(uid,vid);
         BaseResp baseResp=new BaseResp();
-        baseResp.setCode(code);
-        baseResp.setMessage("删除成功");
+        if(video!=null){
+            Integer code=videoDao.delcollections(uid,vid);
+            Integer co=-1;
+            videoDao.updatecollections(co,vid);
+            baseResp.setCode(code);
+            baseResp.setMessage("删除成功");
+        }else{
+            baseResp.setCode(1);
+            baseResp.setMessage("删除成功");
+        }
         return baseResp;
     }
 
@@ -93,6 +99,9 @@ public class VideoServiceImpl implements VideoService {
             baseResp.setCode(code);
             baseResp.setMessage("关注成功");
         }else{
+            videoDao.delfollow(uid,fid);
+            videoDao.deluserfollow(uid,fid);
+            videoDao.deluserfans(uid,fid);
             baseResp.setCode(0);
             baseResp.setMessage("用户已关注成功");
         }
@@ -242,6 +251,41 @@ public class VideoServiceImpl implements VideoService {
         baseResp.setCode(1);
         baseResp.setList(historys);
         baseResp.setMessage("历史观看列表查询成功");
+        return baseResp;
+    }
+
+    @Override
+    public BaseResp findvideo(Integer vid) {
+        List<Video> videos=videoDao.findvideo(vid);
+        BaseResp baseResp=new BaseResp();
+        baseResp.setList(videos);
+        baseResp.setCode(1);
+        baseResp.setMessage("视频查询成功");
+        return baseResp;
+    }
+
+    @Override
+    public BaseResp findUpUser(Integer vid) {
+        List<User> users=videoDao.findUpUser(vid);
+        BaseResp baseResp=new BaseResp();
+        baseResp.setList(users);
+        baseResp.setCode(1);
+        baseResp.setMessage("查询up成功");
+        return baseResp;
+    }
+
+    @Override
+    public UserCollections findUserCollection(Integer uid, Integer vid) {
+        UserCollections videos=videoDao.findUserCollection(uid,vid);
+        return videos;
+    }
+
+    @Override
+    public BaseResp findAllCollection(Integer vid) {
+        List<Video> videos=videoDao.findAllCollection(vid);
+        BaseResp baseResp=new BaseResp();
+        baseResp.setList(videos);
+        baseResp.setCode(1);
         return baseResp;
     }
 }

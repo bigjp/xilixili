@@ -1,9 +1,6 @@
 package com.qf.dao;
 
-import com.qf.Group;
-import com.qf.History;
-import com.qf.User;
-import com.qf.Video;
+import com.qf.*;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -49,7 +46,7 @@ public interface VideoDao {
 
     Integer addfans(@Param("fid") Integer fid, @Param("uid") Integer uid);
 
-    Integer updatecollections( @Param("vid") Integer vid);
+    Integer updatecollections( @Param("co")Integer co,@Param("vid") Integer vid);
 
     Integer delcollections(@Param("uid") Integer uid, @Param("vid") Integer vid);
 
@@ -71,4 +68,16 @@ public interface VideoDao {
     Group findgroupuser(@Param("gid") Integer gid, @Param("fid") Integer fid);
 
     Integer addfollow(@Param("uid") Integer uid,@Param("fid") Integer fid);
+
+    List<Video> findvideo(@Param("vid") Integer vid);
+
+    List<User> findUpUser(@Param("vid") Integer vid);
+
+    Integer deluserfollow(@Param("uid") Integer uid,@Param("fid") Integer fid);
+
+    Integer deluserfans(@Param("uid")Integer uid,@Param("fid") Integer fid);
+
+    UserCollections findUserCollection(@Param("uid") Integer uid, @Param("vid") Integer vid);
+
+    List<Video> findAllCollection(@Param("vid") Integer vid);
 }

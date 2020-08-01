@@ -16,6 +16,7 @@ public class Video {
     private Integer collections;
     private Integer great;
     private String videopath;
+    private String image;
 
     public String getDate() {
         return date;

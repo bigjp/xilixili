@@ -1,6 +1,8 @@
 package com.qf.controller;
 
 
+import com.qf.UserCollections;
+import com.qf.Video;
 import com.qf.response.BaseResp;
 import com.qf.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @RestController
 public class VideoController {
@@ -60,26 +63,13 @@ public class VideoController {
     @RequestMapping(value = "/collections",method = RequestMethod.GET)
     public BaseResp collections(Integer uid,Integer vid){
         BaseResp baseResp=new BaseResp();
-        if(collections==0){
-            if(uid!=one || vid!=video){
-                baseResp= videoService.collections(uid, vid);
-                collections++;
-                one=uid;
-                video=vid;
-            }else{
-                baseResp.setCode(0);
-                baseResp.setMessage("已收藏");
-            }
+        //查询此视频有没有已经被收藏
+        UserCollections video =videoService.findUserCollection(uid,vid);
+        if(video==null){
+            baseResp= videoService.collections(uid, vid);
         }else{
-            if(uid!=one || vid!=video){
-                baseResp= videoService.collections(uid, vid);
-                one=uid;
-                video=vid;
-                collections--;
-            }else{
-                baseResp.setCode(0);
-                baseResp.setMessage("已收藏");
-            }
+            baseResp.setMessage("已收藏");
+            baseResp.setCode(0);
         }
        return baseResp;
     }
@@ -176,4 +166,24 @@ public class VideoController {
         return baseResp;
     }
 
+    //根据id查询视频
+    @RequestMapping(value = "/findvideo",method = RequestMethod.GET)
+    public BaseResp findvideo(Integer vid){
+        BaseResp baseResp=videoService.findvideo(vid);
+        return baseResp;
+    }
+
+    //查询up
+    @RequestMapping(value = "findUpUser",method = RequestMethod.GET)
+    public BaseResp findUpUser(Integer vid){
+        BaseResp baseResp=videoService.findUpUser(vid);
+        return  baseResp;
+    }
+
+    //查询收藏量
+    @RequestMapping(value = "/findAllCollection",method = RequestMethod.GET)
+    public BaseResp findAllCollection(Integer vid){
+        BaseResp baseResp=videoService.findAllCollection(vid);
+        return baseResp;
+    }
 }

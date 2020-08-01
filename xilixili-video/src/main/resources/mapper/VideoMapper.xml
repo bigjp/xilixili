@@ -30,7 +30,7 @@
 
     <update id="updatecollections" parameterType="int">
 
-        update video set collections=collections+1 where vid=#{vid}
+        update video set collections=collections+#{co} where vid=#{vid}
 
     </update>
 
@@ -191,4 +191,42 @@
 
     </insert>
 
+    <select id="findvideo" parameterType="int" resultType="Video">
+
+        select * from video where vid=#{vid}
+
+    </select>
+
+    <select id="findUpUser" resultType="User" parameterType="int">
+
+         SELECT `user`.uid,`user`.nickname,`user`.`sign`,`user`.`image` FROM `user`,user_push,video WHERE
+            user_push.`vid`=video.`vid`
+        AND `user`.`uid`=user_push.`uid`
+        AND video.vid=#{vid}
+
+    </select>
+
+    <delete id="deluserfollow" parameterType="int">
+
+        delete from user_follow where uid=#{uid} and fid=#{fid}
+
+    </delete>
+
+    <delete id="deluserfans" parameterType="int">
+
+        delete from user_fans where uid=#{fid} and fansid=#{uid}
+
+    </delete>
+
+    <select id="findUserCollection" resultType="UserCollections" parameterType="int">
+
+      select * from user_collections where uid=#{uid} and vid=#{vid}
+
+    </select>
+
+    <select id="findAllCollection" resultType="Video" parameterType="int">
+
+        select collections from video where vid=#{vid}
+
+    </select>
 </mapper>
