@@ -288,4 +288,40 @@ public class VideoServiceImpl implements VideoService {
         baseResp.setCode(1);
         return baseResp;
     }
+
+    @Override
+    public BaseResp findVideoByType(String type,Integer begin,Integer size) {
+        List<Video> videos=videoDao.findVideoByType(type,begin,size);
+        BaseResp baseResp=new BaseResp();
+        baseResp.setList(videos);
+        baseResp.setCode(1);
+        return baseResp;
+    }
+
+    @Override
+    public BaseResp paihangbang(String type,Integer begin,Integer size) {
+        List<Video> videos=videoDao.paihangbang(type,begin,size);
+        BaseResp baseResp = new BaseResp();
+        baseResp.setCode(1);
+        baseResp.setList(videos);
+        return baseResp;
+    }
+
+    @Override
+    public BaseResp findAllByType(String type) {
+        List<Video> videos=videoDao.findAllByType(type);
+        BaseResp baseResp=new BaseResp();
+        baseResp.setList(videos);
+        baseResp.setCode(1);
+        return baseResp;
+    }
+
+    @Override
+    public BaseResp paihangbangAll(String type) {
+        List<Video> videos=videoDao.paihangbangAll(type);
+        BaseResp baseResp=new BaseResp();
+        baseResp.setList(videos);
+        baseResp.setCode(1);
+        return baseResp;
+    }
 }

@@ -6,6 +6,7 @@ import com.qf.Video;
 import com.qf.response.BaseResp;
 import com.qf.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 public class VideoController {
 
     private Integer count=0;
@@ -186,4 +188,34 @@ public class VideoController {
         BaseResp baseResp=videoService.findAllCollection(vid);
         return baseResp;
     }
+
+    //分类查询
+    @RequestMapping(value = "/findVideoByType",method = RequestMethod.GET)
+    public BaseResp findVideoByType(String type,Integer currentpage,Integer size){
+        Integer begin=(currentpage-1)*size;
+        BaseResp baseResp=videoService.findVideoByType(type,begin,size);
+        return baseResp;
+    }
+
+    //排行榜
+    @RequestMapping(value = "/paihangbang",method = RequestMethod.GET)
+    public BaseResp paihangbang(String type,Integer currentpage,Integer size){
+        Integer begin=(currentpage-1)*size;
+        BaseResp baseResp=videoService.paihangbang(type,begin,size);
+        return baseResp;
+    }
+
+    //根据类别查询
+    @RequestMapping(value = "/findAllByType",method = RequestMethod.GET)
+    public BaseResp findAllByType(String type){
+        BaseResp baseResp=videoService.findAllByType(type);
+        return  baseResp;
+    }
+
+    @RequestMapping(value = "/paihangbangAll",method = RequestMethod.GET)
+    public BaseResp paihangbangAll(String type){
+        BaseResp baseResp=videoService.paihangbangAll(type);
+        return baseResp;
+    }
+
 }

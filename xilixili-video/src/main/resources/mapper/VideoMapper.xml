@@ -199,7 +199,7 @@
 
     <select id="findUpUser" resultType="User" parameterType="int">
 
-         SELECT `user`.uid,`user`.nickname,`user`.`sign`,`user`.`image` FROM `user`,user_push,video WHERE
+         SELECT `user`.uid,`user`.nickname,`user`.`sign`,`user`.`userimage` FROM `user`,user_push,video WHERE
             user_push.`vid`=video.`vid`
         AND `user`.`uid`=user_push.`uid`
         AND video.vid=#{vid}
@@ -227,6 +227,53 @@
     <select id="findAllCollection" resultType="Video" parameterType="int">
 
         select collections from video where vid=#{vid}
+
+    </select>
+
+
+    <select id="findVideoByType"  resultType="Video">
+
+        select `user`.uid,`user`.nickname,`user`.sign,`user`.userimage,video.vid,video.title,video.description,video.type,video.clicks,
+        video.collections,video.great,video.videopath,video.date,video.date,video.image
+        from `user`,video,user_push
+        where `user`.uid=user_push.uid
+        and user_push.vid=video.vid
+        and video.type=#{type} LIMIT #{begin},#{size}
+
+    </select>
+
+    <select id="paihangbang" resultType="Video">
+
+        select `user`.uid,`user`.nickname,`user`.sign,`user`.userimage,video.vid,video.title,video.description,video.type,video.clicks,
+        video.collections,video.great,video.videopath,video.date,video.date,video.image
+        from `user`,video,user_push
+        where `user`.uid=user_push.uid
+        and user_push.vid=video.vid
+        and video.type=#{type} ORDER BY clicks DESC LIMIT #{begin},#{size}
+
+    </select>
+
+    <select id="findAllByType" resultType="Video">
+
+        select `user`.uid,`user`.nickname,`user`.sign,`user`.userimage,video.vid,video.title,video.description,video.type,video.clicks,
+        video.collections,video.great,video.videopath,video.date,video.date,video.image
+        from `user`,video,user_push
+        where `user`.uid=user_push.uid
+        and user_push.vid=video.vid
+        and video.type=#{type}
+
+
+    </select>
+
+    <select id="paihangbangAll" resultType="Video">
+
+        select `user`.uid,`user`.nickname,`user`.sign,`user`.userimage,video.vid,video.title,video.description,video.type,video.clicks,
+        video.collections,video.great,video.videopath,video.date,video.date,video.image
+        from `user`,video,user_push
+        where `user`.uid=user_push.uid
+        and user_push.vid=video.vid
+        and video.type=#{type} ORDER BY clicks DESC
+
 
     </select>
 </mapper>

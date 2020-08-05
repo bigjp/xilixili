@@ -17,14 +17,18 @@ public class Video {
     private Integer great;
     private String videopath;
     private String image;
+    private Integer uid;
+    private String nickname;
+    private String sign;
+    private String userimage;
 
     public String getDate() {
         return date;
     }
 
-    public void setDate(String date) {
-        Long aLong = Long.valueOf(date);
-        String format = new SimpleDateFormat("yyyy-MM-dd").format(new Date(aLong));
-        this.date = format;
-    }
+//    public void setDate(String date) {
+//        Long aLong = Long.valueOf(date);
+//        String format = new SimpleDateFormat("yyyy-MM-dd").format(new Date(aLong));
+//        this.date = format;
+//    }
 }

@@ -80,4 +80,12 @@ public interface VideoDao {
     UserCollections findUserCollection(@Param("uid") Integer uid, @Param("vid") Integer vid);
 
     List<Video> findAllCollection(@Param("vid") Integer vid);
+
+    List<Video> findVideoByType(@Param("type") String type,@Param("begin") Integer begin, @Param("size") Integer size);
+
+    List<Video> paihangbang(@Param("type") String type,@Param("begin")Integer begin,@Param("size")Integer size);
+
+    List<Video> findAllByType(@Param("type") String type);
+
+    List<Video> paihangbangAll(@Param("type") String type);
 }

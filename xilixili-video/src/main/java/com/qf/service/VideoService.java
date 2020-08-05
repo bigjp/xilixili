@@ -52,4 +52,12 @@ public interface VideoService {
     UserCollections findUserCollection(Integer uid, Integer vid);
 
     BaseResp findAllCollection(Integer vid);
+
+    BaseResp findVideoByType(String type,Integer currentpage,Integer size);
+
+    BaseResp paihangbang(String type,Integer begin,Integer size);
+
+    BaseResp findAllByType(String type);
+
+    BaseResp paihangbangAll(String type);
 }
