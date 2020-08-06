@@ -1,16 +1,19 @@
 package com.qf.controller;
 
 
+import com.qf.User;
 import com.qf.UserCollections;
 import com.qf.Video;
 import com.qf.response.BaseResp;
 import com.qf.service.VideoService;
+import com.qf.util.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -28,6 +31,9 @@ public class VideoController {
 
     @Autowired
     private VideoService videoService;
+
+    @Autowired
+    private RedisUtils redisUtils;
 
 
     //查询视频点赞量
@@ -216,6 +222,24 @@ public class VideoController {
     public BaseResp paihangbangAll(String type){
         BaseResp baseResp=videoService.paihangbangAll(type);
         return baseResp;
+    }
+
+    @RequestMapping(value="/isuser",method = RequestMethod.GET)
+    public BaseResp isuser(){
+//        User user = (User)redisUtils.get("user");
+        BaseResp baseResp = new BaseResp();
+        User user=new User();
+        user.setUserimage("/static/img/4.jpg");
+        user.setUid(1);
+        List<User> users=new ArrayList<>();
+        users.add(user);
+        if(user==null){
+            baseResp.setCode(0);
+        }else{
+            baseResp.setList(users);
+            baseResp.setCode(1);
+        }
+      return baseResp;
     }
 
 }
